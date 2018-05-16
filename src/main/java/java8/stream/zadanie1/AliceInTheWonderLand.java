@@ -6,8 +6,9 @@ import java.util.List;
 import java.io.File;
 import java.util.Scanner;
 
-public class Main {
+public class AliceInTheWonderLand {
     public static void main(String[] args) {
+
         File file = new File("alice.txt");
         List<String> listOfWords = new LinkedList<>();
         try {
@@ -18,14 +19,11 @@ public class Main {
             e.printStackTrace();
         }
 
-        // 1. jakie jest 20 unikalnych najdłuższych słów?
-        // 2. ile jest unikalnych słów?
-
         listOfWords.removeIf(word -> word.contains("-")); // we don't care for compound words like wide-shouldered
         listOfWords.replaceAll(n -> n.replaceAll("[‘,”;:!.\"'“’]", "")); // we want to get rid of all kinds of punctuation marks
 
-        listOfWords.stream().sorted((x, y) -> y.length() - x.length()).limit(20).forEach(System.out::println);
-        System.out.println(listOfWords.stream().distinct().count());
+        //TODO: 1. What are the 20 longest words?   2. If you succeed, find 20 UNIQUE longest words     3. How many UNIQUE words does this book consist of?
+
     }
 }
 
