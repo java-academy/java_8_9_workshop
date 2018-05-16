@@ -24,6 +24,13 @@ public class AliceInTheWonderland {
 
         //TODO: 1. What are the 20 longest words?   2. If you succeed, find 20 UNIQUE longest words     3. How many UNIQUE words does this book consist of?
 
+        listOfWords.stream().sorted((x, y) -> y.length() - x.length()).limit(20).forEach(System.out::println);
+        System.out.println("---------------------------");
+        listOfWords.stream().distinct().sorted((x, y) -> y.length() - x.length()).limit(20).forEach(System.out::println);
+        System.out.println("---------------------------");
+        System.out.println("number of unique words: ");
+        System.out.println(listOfWords.stream().distinct().count());
+
     }
 }
 
