@@ -6,7 +6,7 @@ import java.util.List;
 import java.io.File;
 import java.util.Scanner;
 
-public class AliceInTheWonderLand {
+public class AliceInTheWonderland {
     public static void main(String[] args) {
 
         File file = new File("alice.txt");
