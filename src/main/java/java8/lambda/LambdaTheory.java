@@ -1,6 +1,6 @@
 package java8.lambda;
 
-public class Lambda {
+public class LambdaTheory {
 
     // What lambda expression is?
     //      Quick answer: it is a method
