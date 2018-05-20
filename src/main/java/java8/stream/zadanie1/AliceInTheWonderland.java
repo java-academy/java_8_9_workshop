@@ -22,7 +22,9 @@ public class AliceInTheWonderland {
         listOfWords.removeIf(word -> word.contains("-")); // we don't care for compound words like wide-shouldered
         listOfWords.replaceAll(n -> n.replaceAll("[‘,”;:!.\"'“’]", "")); // we want to get rid of all kinds of punctuation marks
 
-        //TODO: 1. What are the 20 longest words?   2. If you succeed, find 20 UNIQUE longest words     3. How many UNIQUE words does this book consist of?
+        //TODO: 1. What are the 20 longest words?
+        //TODO: 2. If you succeed, find 20 UNIQUE longest words
+        //TODO: 3. How many UNIQUE words does this book consist of?
 
     }
 }
