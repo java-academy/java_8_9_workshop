@@ -40,7 +40,10 @@ public class Exercise3_Traveler {
 
         });
 
-        
+
+    // 4.
+        PrintingConsumer printingConsumer = new PrintingConsumer();
+        myList.forEach(printingConsumer);
 
     }
 }
