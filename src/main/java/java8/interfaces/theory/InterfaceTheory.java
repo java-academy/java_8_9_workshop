@@ -1,4 +1,4 @@
-package java8.lambda.theory;
+package java8.interfaces.theory;
 
 public class InterfaceTheory {
 
