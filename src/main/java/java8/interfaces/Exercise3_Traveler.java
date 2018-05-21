@@ -45,10 +45,12 @@ public class Exercise3_Traveler {
         PrintingConsumer printingConsumer = new PrintingConsumer();
         myList.forEach(printingConsumer);
 
+        myList.forEach(integer -> System.out.println("Lambda4: " + integer));
 
     // 5.
         IncreasingConsumer increasingConsumer = new IncreasingConsumer();
         myList.forEach(increasingConsumer);
 
+        myList.forEach(integer -> System.out.println("Lambda5: " + (integer + 10)));
     }
 }
