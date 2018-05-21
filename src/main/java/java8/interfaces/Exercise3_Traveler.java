@@ -45,5 +45,10 @@ public class Exercise3_Traveler {
         PrintingConsumer printingConsumer = new PrintingConsumer();
         myList.forEach(printingConsumer);
 
+
+    // 5.
+        IncreasingConsumer increasingConsumer = new IncreasingConsumer();
+        myList.forEach(increasingConsumer);
+
     }
 }
