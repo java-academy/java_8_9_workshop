@@ -1,7 +1,9 @@
 package java8.interfaces;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -23,6 +25,11 @@ public class Exercise3_Traveler {
                 .collect(Collectors.toList());
 
     // 2.
-        
+        Iterator<Integer> it = myList.iterator();
+        while(it.hasNext()){
+            Integer i = it.next();
+            System.out.println("From iterator: " + i);
+        }
+
     }
 }
