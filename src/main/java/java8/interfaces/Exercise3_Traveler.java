@@ -31,5 +31,16 @@ public class Exercise3_Traveler {
             System.out.println("From iterator: " + i);
         }
 
+    // 3.
+        myList.forEach(new Consumer<Integer>() {
+
+            public void accept(Integer t) {
+                System.out.println("From anonymous class: "+t);
+            }
+
+        });
+
+        
+
     }
 }
