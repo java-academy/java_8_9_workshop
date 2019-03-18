@@ -3,6 +3,7 @@ package java8.stream.zadanko1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Wiktor Rup
@@ -16,9 +17,23 @@ public class Main {
         List<Book> library = new ArrayList<>();
         initializeLibrary(library);
 
+        System.out.println("ZADANIE 1: ");
         // 1. Wykorzystujac zrodlo, ktorym jest biblioteka (library ArrayList) wypisz tytuly ksiazek, ktore sa jednowyrazowe.
+        library.stream()
+               .map(Book::getTitle)
+               .filter(title -> !title.contains(" "))
+               .forEach(System.out::println);
 
+        System.out.println("\nZADANIE 2: ");
         // 2. Wykorzystujac zroldo, ktorym jest biblioteka (library ArrayList) zapisz nazwiska autorow, ktorzy maja wiecej niz 50 lat do nowej listy. Naziwska nie powinny sie powtarzac.
+        List<String> authors = library.stream()
+                                      .map(Book::getAuthor)
+                                      .filter(author -> author.getAge() > 50)
+                                      .map(Author::getSurname)
+                                      .map(String::toUpperCase)
+                                      .distinct()
+                                      .collect(Collectors.toList());
+        System.out.println(authors);
 
     }
 
@@ -29,7 +44,7 @@ public class Main {
         Author aKajtochowa = new Author("Anna", "Kajtochowa", 83);
         Book book1 = new Book("Pan Lodowego Ogrodu", jGrzedowicz);
         Book book2 = new Book("Azyl", jGrzedowicz);
-        Book book3 = new Book("Tymczasem ", jAnderman);
+        Book book3 = new Book("Tymczasem", jAnderman);
         Book book4 = new Book("Fotografie", jAnderman);
         Book book5 = new Book("Listy z Rzymu", zKadlubek);
         Book book6 = new Book("Ajschylos", zKadlubek);
